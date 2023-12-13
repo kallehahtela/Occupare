@@ -1,0 +1,9 @@
+Primary color: Teal #008080
+
+Secondary color: Coral #FF7F50
+
+Accent color: Lemon Yellow #FAFA33
+
+Neutral color: Soft grey #A8B8D0
+
+Text color: Dark Charcoal #333333

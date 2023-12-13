@@ -1,0 +1,159 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Basic styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header styles with sticky positioning */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
+    background-color: white; /* Background color to ensure content doesn't show through */
+    z-index: 1000; /* High z-index to keep it above other content */
+}
+
+/* Logo styles */
+.logo {
+    flex: 1;
+    text-align: center;
+    color: #008080; /* Bright pink color for the logo */
+    font-size: 1.6em; /* Slightly larger font size */
+    font-weight: bold; /* Optional: Makes the logo text bold */
+}
+
+/* Adjusting search bar to ensure space around it */
+.search-bar {
+    flex: 1;
+    padding: 0 10px; /* Adds padding on both sides */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+}
+
+/* Menu icon */
+.menu-icon {
+    flex: 1;
+    text-align: center;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-weight: 300; /* Normal text with font weight 300 */
+    color: #000;
+}
+
+.hero .bold {
+    font-weight: 400; /* Semibold text */
+}
+
+.hero .teal {
+    color: #008080; /* Text in pink color */
+    font-weight: bold; /* Bold text */
+}
+
+/* Footer styles */
+footer {
+    background-color: #cacaca;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+header > div {
+    flex: 1;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 90%;
+    padding: 0px;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* ... [other styles for hero text] ... */
+
+/* Styles for CTA Button */
+.cta-button {
+    background-color: #008080; /* Bright pink background */
+    color: #fff; /* White text */
+    font-weight: 400;
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 1.2em; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    margin-top: 20px; /* Space above the button */
+    width: 37vh;
+    height: 12vh;
+}
+
+.cta-button:hover {
+    background-color: #008080; /* Slightly darker pink on hover */
+}
+
+/* Styles for Product Cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adding a subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for the cards */
+    background-color: #fff; /* Card background color */
+}
+
+/* Media Query for larger screens */
+@media (min-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on larger screens */
+    }
+}
+
+/* Additional styling and media queries as needed */
