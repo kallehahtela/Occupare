@@ -5,7 +5,8 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    color: #333333;
 }
 
 body {
@@ -75,6 +76,12 @@ header {
     font-weight: 400; /* Semibold text */
 }
 
+.coral-highlight {
+    color: #FF7F50;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px #333333;
+}
+
 .hero .teal {
     color: #008080; /* Text in pink color */
     font-weight: bold; /* Bold text */
@@ -82,7 +89,7 @@ header {
 
 /* Footer styles */
 footer {
-    background-color: #cacaca;
+    background-color: #A8B8D0;
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -135,18 +142,36 @@ header > div {
 /* Styles for Product Cards */
 .product-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    grid-gap: 20px; /* Consistent spacing between cards */
+    padding: 20px; /* Padding around the grid */
 }
 
 .product-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adding a subtle shadow for depth */
-    border-radius: 10px; /* Rounded corners for the cards */
-    background-color: #fff; /* Card background color */
+    border: 1px solid #ccc; /* Subtle border for definition */
+    padding: 20px; /* Internal padding for content */
+    text-align: center; /* Centered text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    background-color: #fff; /* White background for a clean appearance */
+    color: #333; /* Dark text for readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover for a 'pop' effect */
+}
+
+.product-item a {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Ensures the link color matches the surrounding text */
+    display: block; /* Makes the entire area of the product item clickable */
+    height: 100%; /* Ensures the link covers the entire area of the product item */
+}
+
+.product-item:hover a {
+    color: #008080; /* Optional: Changes link color on hover for a visual effect */
 }
 
 /* Media Query for larger screens */
