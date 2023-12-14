@@ -1,6 +1,12 @@
 /* Custom Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
 
+/* Customizing the highlight color */
+::selection {
+    background: #FF7F50; /* Change the background color */
+    color: white; /* Change the text color */
+}
+
 /* Basic styles */
 html, body {
     height: 100%;
@@ -55,6 +61,7 @@ header {
 .menu-icon {
     flex: 1;
     text-align: center;
+    cursor: pointer;
 }
 
 /* Hero Section Styles */
@@ -105,6 +112,49 @@ header > div {
 .search-bar input {
     width: 90%;
     padding: 0px;
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.search-bar input.active {
+    width: 120%; /* Example: increase width when active */
+    /* Add other styles if needed, like a different border or shadow */
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    height: 100%; /* Full-screen height */
+    width: 0; /* Initial width is 0 */
+    position: fixed; /* Positioned relative to the viewport */
+    z-index: 1; /* Sits on top of the page */
+    top: 0; /* Starts from the top */
+    left: 0; /* Start from the left side */
+    background-color: #111; /* Background color */
+    overflow-x: hidden; /* No horizontal scroll */
+    transition: 0.5s; /* Smooth transition for opening/closing */
+    padding-top: 60px; /* Padding from the top */
+}
+
+/* Close Button */
+.mobile-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Navigation Links */
+.mobile-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+    color: #f1f1f1;
 }
 
 /* Hero Section Styles */
