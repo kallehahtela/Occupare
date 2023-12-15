@@ -1,0 +1,31 @@
+@media (max-width: 375px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .explore-img {
+        width: 100%h;
+        position: relative;
+        top: -21vh;
+    }
+
+    .hero h1 {
+        position: relative;
+        left: 2vh;
+        top: 5vh;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+
+    .mobile.nav a {
+        padding: 40px;
+    }
+}

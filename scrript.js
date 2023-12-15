@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function openNav() {
-    document.getElementById("mobileNav").style.width = "250px"; // Set the width of the menu
+    document.getElementById("mobileNav").style.width = "100%"; // Set the width of the menu
 }
 
 function closeNav() {

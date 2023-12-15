@@ -59,9 +59,22 @@ header {
 
 /* Menu icon */
 .menu-icon {
-    flex: 1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 26px; /* Width of the menu lines */
+    height: 2px; /* Height of the menu lines */
+    background-color: #333; /* Color of the menu lines */
+    margin: 3px 0; /* Spacing between the lines */
+    transition: all 0.3s ease; /* Smooth transition for animations */
 }
 
 /* Hero Section Styles */
@@ -110,45 +123,47 @@ header > div {
 }
 
 .search-bar input {
-    width: 90%;
-    padding: 0px;
+    width: 120%;
+    padding: 5px;
     transition: width 0.3s ease; /* Smooth transition for width change */
-}
 
-.search-bar input.active {
-    width: 120%; /* Example: increase width when active */
-    /* Add other styles if needed, like a different border or shadow */
 }
 
 /* Mobile Navigation Menu */
 .mobile-nav {
-    height: 100%; /* Full-screen height */
-    width: 0; /* Initial width is 0 */
-    position: fixed; /* Positioned relative to the viewport */
-    z-index: 1; /* Sits on top of the page */
-    top: 0; /* Starts from the top */
-    left: 0; /* Start from the left side */
-    background-color: #111; /* Background color */
-    overflow-x: hidden; /* No horizontal scroll */
-    transition: 0.5s; /* Smooth transition for opening/closing */
-    padding-top: 60px; /* Padding from the top */
+    height: 100%;
+    width: 0; /* Initial state is hidden */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #008080;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Expanded state of the menu */
+.mobile-nav.active {
+    width: 100%; /* Full screen width when active */
 }
 
 /* Close Button */
 .mobile-nav .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
+    top: -20px; /* Adjusted to be closer to the top */
+    right: 10px; /* Adjusted to align to the right */
     font-size: 36px;
-    margin-left: 50px;
+    color: white; /* Ensure it's visible on the dark background */
 }
 
 /* Navigation Links */
 .mobile-nav a {
-    padding: 8px 8px 8px 32px;
+    padding: 20px;
     text-decoration: none;
     font-size: 25px;
-    color: white;
+    color: #fff;
+    text-shadow: 3px 3px 1px #FF7F50;
     display: block;
     transition: 0.3s;
 }
@@ -156,7 +171,6 @@ header > div {
 .mobile-nav a:hover {
     color: #f1f1f1;
 }
-
 /* Hero Section Styles */
 .hero {
     text-align: center;
@@ -222,6 +236,20 @@ header > div {
 
 .product-item:hover a {
     color: #008080; /* Optional: Changes link color on hover for a visual effect */
+}
+
+.explore-img {
+    width: 67vh;
+    position: relative;
+    top: -164px;
+    z-index: -1;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover for a 'pop' effect */
+}
+
+.highlight-explore {
+    color: #fff;
+    text-shadow: 3px 3px 2px #FF7F50;
+    font-weight: 700;
 }
 
 /* Media Query for larger screens */
